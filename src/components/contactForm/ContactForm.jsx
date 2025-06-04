@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import { object, string } from "yup";
 import css from "./ContactForm.module.css";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/ContactsSlice";
+import { addContact } from "../../redux/contactsOps";
 
 const personSchema = object().shape({
   username: string().min(3, "To short").max(50, "To long").required("Required"),
